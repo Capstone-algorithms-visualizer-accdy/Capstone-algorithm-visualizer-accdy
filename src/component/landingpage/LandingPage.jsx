@@ -1,14 +1,26 @@
 import React from "react";
 import "./LandingPage.css";
+import { useNavigate } from "react-router-dom";
+import MiddleTitle from "../middletitle/MiddleTitle";
+import SortContainer from "../sortContainer/SortContainer";
+import Footer from "../footer/Footer";
 
 const LandingPage = () => {
+  const videoComponent =
+    process.env.PUBLIC_URL +
+    "./mp4/0yEX6dfG1L8t8Nv9a2UX9k1DfI9lTOMX_9c5a0990aaa1b93e60a271db06dfbac9f2ad25e10bef32cd5cd54e19d46eabf5.mp4";
+
+  const navigate = useNavigate();
+  
   return (
     <div className="landing-page">
       <header className="header">
         <div className="container">
           <h1 className="title">Algorithm Visualizer</h1>
         </div>
-        <button className="login-btn">Log in</button>
+        <button className="login-btn" onClick={() => navigate("/login")}>
+          Log in
+        </button>
       </header>
       <main className="main">
         <div className="text-container">
@@ -18,20 +30,22 @@ const LandingPage = () => {
           </h1>
           <p className="main-subtitle">
             Build computer science skills in minutes a day with bite-sized,
-            interactive problem solving.
           </p>
-          <button className="main-get-started-btn">Get started</button>
+          <p className="main-subtitle2"> interactive lessons you'll love.</p>
+          <button className="main-get-started-btn" onClick={() => navigate("/sorting")}>
+            Sorting visualizer
+          </button>
+          <button className="main-get-started-btn2" onClick={() => navigate("/sorting")}>
+            Pathfinder visualizer
+          </button>
         </div>
         <div className="gif-container">
-          <video
-            src={process.env.PUBLIC_URL + '/0yEX6dfG1L8t8Nv9a2UX9k1DfI9lTOMX_9c5a0990aaa1b93e60a271db06dfbac9f2ad25e10bef32cd5cd54e19d46eabf5.mp4'}
-            autoPlay
-            loop
-            muted
-            className="gif"
-          />
+          <video src={videoComponent} autoPlay loop muted />
         </div>
       </main>
+      <MiddleTitle />
+      <SortContainer />  
+      <Footer />
     </div>
   );
 };
