@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Container,
@@ -29,6 +29,10 @@ const LearnMore = () => {
   const handleTabChange = (event, newValue) => {
     setSelectedTab(newValue);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Container>
@@ -702,6 +706,18 @@ const LearnMore = () => {
 
         {/* Add more cards for other sorting algorithms here like above */}
 
+        <Typography variant="body2" sx={{ mt: 2 }}>
+          Explore and understand pathfinding algorithms and sorting algorithms
+          in depth with our visualizers. The pathfinding visualizer allows you
+          to see visually how different algorithms work, compare their
+          efficiency, and gain a better grasp of their practical applications.
+          Whether you're interested in classic algorithms like A* and Dijkstra's
+          or more advanced techniques, the visualizer provides interactive
+          demonstrations to enhance your learning experience. Similarly, the
+          sorting visualizer helps you grasp sorting algorithms through engaging
+          and interactive visualizations, making complex concepts more
+          accessible.
+        </Typography>
         <Box mt={4}>
           <Button
             variant="contained"
@@ -735,10 +751,6 @@ const LearnMore = () => {
           >
             Try Pathfinding Visualizer
           </Button>
-          <Typography variant="body2" sx={{ mt: 2 }}>
-            Learn more about pathfinding algorithms in the pathfinding
-            visualizer.
-          </Typography>
         </Box>
       </Box>
     </Container>

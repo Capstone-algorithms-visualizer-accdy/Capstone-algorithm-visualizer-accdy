@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Toolbar,
@@ -30,6 +30,7 @@ const Header = styled(Typography)(({ theme }) => ({
   },
 }));
 
+// TeamMemberContainer component
 const TeamMemberContainer = styled("div")(({ theme }) => ({
   textAlign: "center",
   padding: "10px",
@@ -39,14 +40,14 @@ const TeamMemberContainer = styled("div")(({ theme }) => ({
     boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.2)",
   },
 }));
-
+//  Avatar component with hover effect
 const StyledAvatar = styled(Avatar)(({ theme }) => ({
   width: 100,
   height: 100,
   margin: "0 auto",
   transition: "transform 0.3s ease",
   "&:hover": {
-    transform: "rotate(15deg)", // More subtle rotation
+    transform: "rotate(15deg)",
   },
 }));
 
@@ -74,7 +75,6 @@ const AnimatedIcon = styled("div")(({ theme, color }) => ({
 // SkillIcon Component
 const SkillIcon = ({ skill }) => {
   let iconColor;
-
   switch (skill) {
     case "HTML5":
       iconColor = "#E44D26"; // HTML5 color
@@ -118,10 +118,12 @@ const SkillIcon = ({ skill }) => {
 
 const AboutUs = () => {
   const navigate = useNavigate();
-
   const navigateHome = () => {
     navigate("/");
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Box
