@@ -12,6 +12,7 @@
   font-weight: 300; /* Set font weight to 300 */
 }
 
+
 @media(max-width:520px) {
   .md-container {
     position: static;

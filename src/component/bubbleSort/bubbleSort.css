@@ -1,9 +1,13 @@
+/* Apply box-sizing universally */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .section-container {
   display: flex;
   align-items: center;
   height: 100%;
-  margin: 0 7rem; /* Add padding of 5rem on each side */
-  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  margin: 0 7rem; /* Margin on each side */
   border: none;
 }
 
@@ -13,29 +17,28 @@
 }
 
 .bubble-btn {
-  width: 350px; /* Set a fixed width */
-  height: 60px; /* Set a fixed height */
+  width: 350px; /* Fixed width */
+  height: 60px; /* Fixed height */
   padding: 0.5rem 7rem;
   background-color: #446ff2;
   border-radius: 1rem;
   font-size: 1.9rem;
   font-weight: 300;
   font-family: "teko", sans-serif;
-  transition: all 0.4s;
-  margin: 0 0 0 4rem;
+  transition: background-color 0.4s, transform 0.1s;
+  margin-left: 4rem; /* Only left margin */
   border: none;
   color: white;
 }
 
 .bubble-btn:hover {
-  transition: all 0.4s;
   background-color: #3c63d8;
   cursor: pointer;
 }
 
 .bubble-btn:active {
   background-color: #446ff2;
-  transition: 0.1s;
+  transform: scale(0.98);
 }
 
 .bubble-video-container {
@@ -55,8 +58,8 @@
   font-size: 1.2rem;
   color: #666;
   text-align: justify;
-  margin: 0 2rem 0 2rem;
-  width: 600%;
+  margin: 0 2rem;
+  width: 100%; /* Change to 100% to be responsive */
 }
 
 .learn-more-btn {
@@ -66,39 +69,35 @@
   color: #fff;
   background-color: #446ff2;
   border: none;
-  border-radius: 5px; 
+  border-radius: 5px;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
 
 .learn-more-btn:hover {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.learn-more-href {
-  text-decoration: none;
-  color: #666;
-}
-
+.learn-more-href,
 .bubble-link {
   text-decoration: none;
   color: #666;
 }
 
+/* Media Queries */
 @media (max-width: 900px) {
   .section-container {
-    display: flex;
     flex-direction: column-reverse;
+    margin: 0; /* Remove margin on small screens */
   }
   .bubble-description {
-    margin: 35px;
+    margin: 1rem;
   }
 }
 
 @media (min-width: 900px) {
   .section-container {
-    width: 100%;
-    margin: 0 9em;
+    margin: 0 9rem;
     width: 80%;
   }
   .bubble-description {
@@ -106,7 +105,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .bubble-btn {
     width: 250px;
     height: 50px;

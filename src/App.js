@@ -8,21 +8,21 @@ import ResetPassword from "./component/Login/ResetPassword.jsx";
 import SortContainer from "./component/sortContainer/SortContainer.jsx";
 import MiddleTitle from "./component/middletitle/MiddleTitle.jsx";
 import Sorting from "./component/Sorting/Sorting.jsx";
-import AboutUs from './component/footer/AboutUs.jsx';
-import Testimonials from './component/footer/Testimonials.jsx';
+import AboutUs from "./component/footer/AboutUs.jsx";
+import Testimonials from "./component/footer/Testimonials.jsx";
 import Pathfinding from "./component/Pathfinding/Pathfinding.js";
 import LearnMore from "./component/learmore/LearnMore.jsx";
-import ContactUs from './component/footer/ContactUs.jsx';
-import Footer from "./component/footer/Footer.jsx";
-import MockInterview from './component/MockInterview/MockInterview.jsx';
-import Quiz from './component/Quiz/Quiz.jsx';
-import BinaryTreeVisualizer from './component/binaryTree/BinaryTreeVisualizer.jsx';
-import LinkedListVisualizer from './component/LinkedList/LinkedListVisualizer.jsx';
-import StackQueueVisualizer from './component/StackAndQueue/StackQueueVisualizer.jsx';
-import GraphVisualizer from './component/graph-visual/GraphVisualizer.jsx';
-import BinarySearchVisualizer from './component/binarySearch/BinarySearchVisualizer.jsx';
-import VisualizerHome from './component/visualizerProfile/VisualizerHome.jsx';
-import ConvexHull from './component/ConvexHull/ConvexHull.js';
+import ContactUs from "./component/footer/ContactUs.jsx";
+// import Footer from "./component/footer/Footer.jsx";
+import MockInterview from "./component/MockInterview/MockInterview.jsx";
+import Quiz from "./component/Quiz/Quiz.jsx";
+import BinaryTreeVisualizer from "./component/binaryTree/BinaryTreeVisualizer.jsx";
+import LinkedListVisualizer from "./component/LinkedList/LinkedListVisualizer.jsx";
+import StackQueueVisualizer from "./component/StackAndQueue/StackQueueVisualizer.jsx";
+import GraphVisualizer from "./component/graph-visual/GraphVisualizer.jsx";
+import BinarySearchVisualizer from "./component/binarySearch/BinarySearchVisualizer.jsx";
+import VisualizerHome from "./component/visualizerProfile/VisualizerHome.jsx";
+import ConvexHull from "./component/ConvexHull/ConvexHull.js";
 
 function App() {
   return (
@@ -36,22 +36,20 @@ function App() {
         <Route path="/sortcontainer" element={<SortContainer />} />
         <Route path="/middletitle" element={<MiddleTitle />} />
         <Route path="/sorting" element={<Sorting />} />
-        <Route path='/aboutus' element={<AboutUs />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/pathfinding" element={<Pathfinding />} />
-        <Route path='/testimonials' element={<Testimonials />} />
+        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/learnmore" element={<LearnMore />} />
-        <Route path='/contactus' element={<ContactUs />} />
-        <Route path='/mockinterview' element={<MockInterview />} />
-        <Route path='/Quiz' element={<Quiz />} />
-        <Route path='/binarytree' element={<BinaryTreeVisualizer />} />
-        <Route path='/linkedlist' element={<LinkedListVisualizer />} />
-        <Route path='/stackqueue' element={<StackQueueVisualizer />} />
-        <Route path='/graph' element={<GraphVisualizer />} />
-        <Route path='/binarysearch' element={<BinarySearchVisualizer />} />
-
-        <Route path='/visualizerhome' element={<VisualizerHome />} />
-
-        <Route path='/convexhull' element={<ConvexHull />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/mockinterview" element={<MockInterview />} />
+        <Route path="/Quiz" element={<Quiz />} />
+        <Route path="/binarytree" element={<BinaryTreeVisualizer />} />
+        <Route path="/linkedlist" element={<LinkedListVisualizer />} />
+        <Route path="/stackqueue" element={<StackQueueVisualizer />} />
+        <Route path="/graph" element={<GraphVisualizer />} />
+        <Route path="/binarysearch" element={<BinarySearchVisualizer />} />
+        <Route path="/visualizerhome" element={<VisualizerHome />} />
+        <Route path="/convexhull" element={<ConvexHull />} />
       </Routes>
       {/* <Footer /> */}
     </Router>
