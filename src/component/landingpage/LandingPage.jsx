@@ -20,17 +20,17 @@ const LandingPage = () => {
       <main className='main'>
         <div className='text-container'>
           <h1 className='main-title'>
-            The best way to learn <span className='highlight'>algorithms basics</span>
+            Master <span className='highlight'>Algorithms</span> with Interactive Visualizations
           </h1>
           <p className='main-subtitle'>
-            Build computer science skills in minutes a day with bite-sized, <br /> interactive
-            lessons you'll love.
+            Enhance your understanding of computer science with our engaging, interactive lessons.
+            Start visualizing sorting and pathfinding algorithms today!
           </p>
           <button className='main-get-started-btn' onClick={() => navigate('/sorting')}>
-            Sorting visualizer
+            Explore Sorting Algorithms
           </button>
           <button className='main-get-started-btn2' onClick={() => navigate('/pathfinding')}>
-            Pathfinder visualizer
+            Discover Pathfinding Techniques
           </button>
         </div>
         <div className='gif-container'>

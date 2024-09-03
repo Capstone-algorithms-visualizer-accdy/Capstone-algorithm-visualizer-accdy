@@ -1,22 +1,28 @@
 .userAvatar {
-  width: 320px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-right: 4%;
 }
 
-.startMockInterviewBtn {
-  min-width: 250px;
-  padding: 0.75rem 1.5rem;
+.quiz-btn {
+  padding: 0.5rem 1rem;
   font-size: 1.1rem;
-  color: #446ff2;
-  background-color: #f8f9fa;
-  border: 1px solid #446ff2;
+  color: #333;
+  background-color: transparent;
+  border: 2px solid #ccc;
   border-radius: 3rem;
   cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 400;
   transition: box-shadow 0.3s ease;
+  font-weight: 700;
+  position: absolute;
+  right: 1%;
+  top: 20px;
 }
-.startMockInterviewBtn:hover {
-  box-shadow: 0 8px 15px rgba(190, 198, 223, 0.3);
+
+.quiz-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.login-btn {
+  margin: 0 4em;
 }
