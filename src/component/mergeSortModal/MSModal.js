@@ -1,6 +1,7 @@
 import React from 'react';
 import './MSModal.css'; // Ensure this CSS file is created
 
+// REVIEW: This file should be JSX.
 const MSModal = ({ show, onClose, title, children }) => {
   if (!show) {
     return null;

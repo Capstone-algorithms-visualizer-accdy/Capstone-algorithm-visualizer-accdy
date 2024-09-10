@@ -7,6 +7,7 @@ import Instruct from "../Instructions/Instruct.js";
 import instruct_gif from "../../assets/pathfinder.gif";
 import { NavLink } from "react-router-dom";
 
+// REVIEW: This is a fairly complex and impressive piece of code.
 class Pathfinding extends Component {
     constructor() {
         super();
@@ -21,10 +22,12 @@ class Pathfinding extends Component {
             shortestPath: 0,
             number_of_nodes: 0,
             algo_info: {
+                // REVIEW: Bad indentation.
                 "Algorithms": {
             text: "",
             url: ""
         },
+                // REVIEW: Do we really need to store descriptions in state? State is for changing things.
         "Dijkstra's Algorithm": {
             text: "Dijkstra's Algorithm is a popular algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks. It can handle graphs with non-negative weights and is often used in routing and as a subroutine in other graph algorithms.",
             url: "https://www.redblobgames.com/pathfinding/a-star/introduction.html"
@@ -56,6 +59,7 @@ class Pathfinding extends Component {
                     row: i,
                     col: j,
                     isVisited: false,
+                    // REVIEW: You pass the same key twice here.
                     isShortestPath: false,
                     isWall: false,
                     isShortestPath: false

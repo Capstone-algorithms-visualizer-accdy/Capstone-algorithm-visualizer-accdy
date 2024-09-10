@@ -10,6 +10,7 @@ const jwtSignature = 'superSecret';
 
 dotenv.config();
 
+// REVIEW: This file is almost 500 lines of code long, it needed to be broken into many distinct files.
 const createTables = async () => {
   try {
     await client.connect();

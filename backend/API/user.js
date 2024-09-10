@@ -91,6 +91,7 @@ userRouter.post('/sendResetLink', async (req, res) => {
 
 userRouter.put('/resetPassword', async (req, res) => {
   try {
+    // REVIEW: This is a major security vulnerability. This does not check the old password, so any user can curl this route with their own JWT and change any other users password if they know their email.
     const result = await resetPassword(req.body.email, req.body.newPassword, req.body.resetToken);
     res.status(201).send(result);
   } catch (err) {
@@ -114,6 +115,7 @@ userRouter.put('/changePassword', async (req, res) => {
 
 userRouter.put('/updatePersonalInfo', async (req, res) => {
   try {
+    // REVIEW: This does not validate that this is the actual user updating their OWN info. This allows any user to update any other users info as long as they have a valid login session.
     const result = await updatePersonalInfo(
       req.body.userid,
       req.body.newInfoObj,
