@@ -31,6 +31,7 @@ import { SelectionScreen, NextScreen, TopicSelectionScreen, ComfortLevelScreen, 
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
+    // REVIEW: Why do this? It makes some of the pages make little to no sense. Going to /aboutus probably shouldn't require a 3 second delay.
     // Simulate a loading delay
     const timer = setTimeout(() => {
       setLoading(false);
@@ -40,6 +41,8 @@ function App() {
   if (loading) {
     return <Loader />;
   }
+
+  // REVIEW: Inconsistent use of double and single quotes. Need a linter in this code base.
   return (
     <Router>
       <Routes>

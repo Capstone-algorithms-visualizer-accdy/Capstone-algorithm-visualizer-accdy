@@ -17,6 +17,7 @@ app.use('/api', apiRouter);
 const port = process.env.PORT || 6688;
 
 const startServer = async () => {
+  // REVIEW: CRITICAL - This drops your entire database on every machine turn (generally every night). This makes your interview and users only last 24 hours.
   await createTables();
   app.listen(port, () => {
     console.log(chalk.green(`server successfully listening on port ${port}`));

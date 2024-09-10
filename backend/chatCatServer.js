@@ -39,6 +39,7 @@ app.post('/chat', async (req, res) => {
         const botReply = response.data.choices[0].message.content.trim(); // Extract response from OpenAI
         res.json({ reply: botReply });
     } catch (error) {
+        // REVIEW: Might be nice to look in the response to figure out if it is your key or if something actually "error-y" happened.
         if (error.response) {
             console.error('Error communicating with OpenAI:', error.response.status, error.response.data);
             res.status(error.response.status).send(error.response.data);
@@ -49,6 +50,7 @@ app.post('/chat', async (req, res) => {
     }
 });
 
+// REVIEW: This is creating a second server? Why????
 app.listen(port, () => {
     console.log(`ChatCat server running on port ${port}`);
 });
